@@ -1,0 +1,11 @@
+test:
+  override:
+    - npm test
+
+deployment:
+  master:
+    branch: master
+    owner: bdgamble
+    commands:
+      - npm install -g git+https://github.com/cmanzana/node-publish#fc4c6b0c901a58e1ed86defd15de33adf3627d2a
+      - publish

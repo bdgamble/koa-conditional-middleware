@@ -1,0 +1,28 @@
+{
+  "name": "koa-conditional-middleware",
+  "version": "1.0.0",
+  "description": "Middleware to conditionally run another middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdgamble/koa-conditional-middleware.git"
+  },
+  "keywords": [
+    "koa",
+    "middleware",
+    "conditional",
+    "node"
+  ],
+  "author": "Bryan Gamble <bryan.d.gamble@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bdgamble/koa-conditional-middleware/issues"
+  },
+  "homepage": "https://github.com/bdgamble/koa-conditional-middleware#readme",
+  "devDependencies": {
+    "eslint": "^2.9.0"
+  }
+}
