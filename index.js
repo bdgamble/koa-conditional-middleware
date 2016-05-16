@@ -1,14 +1,15 @@
 module.exports = function (condition, success, fail) {
   return function* (next) {
+    const ctx = this;
     if (condition === true ||
-      (typeof condition === 'function' && condition().call(this, next))
+      (typeof condition === 'function' && condition.call(ctx))
     ) {
-      yield success().call(this, next);
+      yield success().call(ctx, next);
       return;
     }
 
     if (fail) {
-      yield fail().call(this, next);
+      yield fail().call(ctx, next);
     }
 
     yield* next;
