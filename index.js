@@ -4,12 +4,12 @@ module.exports = function (condition, success, fail) {
     if (condition === true ||
       (typeof condition === 'function' && condition.call(ctx))
     ) {
-      yield success().call(ctx, next);
+      yield success.call(ctx, next);
       return;
     }
 
     if (fail) {
-      yield fail().call(ctx, next);
+      yield fail.call(ctx, next);
     }
 
     yield* next;
